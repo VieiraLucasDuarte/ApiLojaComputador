@@ -12,6 +12,9 @@ public class Categoria {
    private String descricao;
    private boolean ativo;
 
+   @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+   @JoinColumn(name = "categoria_id")
+   private List<Subategoria> subCategorias;
    public Categoria() {
    }
 
