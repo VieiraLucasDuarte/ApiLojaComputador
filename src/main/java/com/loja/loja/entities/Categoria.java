@@ -1,5 +1,7 @@
 package com.loja.loja.entities;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -12,9 +14,9 @@ public class Categoria {
    private String descricao;
    private boolean ativo;
 
-   @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+   @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
    @JoinColumn(name = "categoria_id")
-   private List<Subategoria> subCategorias;
+   private List<SubCategoria> subCategorias;
    public Categoria() {
    }
 
@@ -40,5 +42,13 @@ public class Categoria {
 
    public void setAtivo(boolean ativo) {
       this.ativo = ativo;
+   }
+
+   public List<SubCategoria> getSubCategorias() {
+      return subCategorias;
+   }
+
+   public void setSubCategorias(List<SubCategoria> subCategorias) {
+      this.subCategorias = subCategorias;
    }
 }

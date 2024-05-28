@@ -17,8 +17,6 @@ logs/
 *.log
 
 # Arquivos de propriedades
-*.properties
-application.properties
 
 # Arquivos de cache
 *.cache
