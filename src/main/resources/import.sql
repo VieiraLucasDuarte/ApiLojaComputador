@@ -9,7 +9,7 @@ INSERT INTO SUB_CATEGORIA (DESCRICAO, ATIVO, CATEGORIA_ID) VALUES ('subacategori
 
 INSERT INTO PRODUTO (CATEGORIA_ID, NOME, Descricao_Curta, Descricao_Longa, valor, promocao, quantidade) values (1, 'Computador', 'Computador bem do top', 'Computador gigantesco', 10.0, true, 100);
 
-INSERT INTO PRODUTO (CATEGORIA_ID, NOME, Descricao_Curta, Descricao_Longa, valor, promocao, quantidade) values (1, 'TECLADO', 'teclado do luz', 'teclado com luz bem grande', 10.0, true, 100);
+INSERT INTO PRODUTO (CATEGORIA_ID, NOME, Descricao_Curta, Descricao_Longa, valor, promocao, quantidade) values (2, 'TECLADO', 'teclado do luz', 'teclado com luz bem grande', 10.0, true, 100);
 
 
 

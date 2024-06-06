@@ -63,14 +63,6 @@ public class Produto {
       this.promocao = promocao;
    }
 
-//   public int getIdCategoria() {
-//      return idCategoria;
-//   }
-//
-//   public void setIdCategoria(int idCategoria) {
-//      this.idCategoria = idCategoria;
-//   }
-
    public int getQuantidade() {
       return quantidade;
    }
@@ -95,11 +87,4 @@ public class Produto {
       this.categoria = categoria;
    }
 
-   //public Categoria getCategoria() {
-   //   return categoria;
-   //}
-
-   //public void setCategoria(Categoria categoria) {
-   //   this.categoria = categoria;
-   //}
 }
