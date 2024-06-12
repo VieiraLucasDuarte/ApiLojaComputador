@@ -31,4 +31,12 @@ public class ProdutoController {
                       .anyMatch(subCategoria -> subCategoria.getId() == idSub))
               .collect(Collectors.toList());
    }
+
+   @GetMapping("/{idProduto}")
+   public Produto getProduto(@PathVariable int idProduto){
+      return repository.findAll().stream()
+              .filter(produto -> idProduto == produto.getId())
+              .findFirst()
+              .orElse(null);
+   }
 }
