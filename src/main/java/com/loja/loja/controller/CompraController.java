@@ -20,7 +20,7 @@ public class CompraController {
    @Autowired
    private CompraService service;
 
-   @PostMapping("/login")
+   @PostMapping()
    @ResponseStatus(HttpStatus.CREATED)
    public Compra CreatedCompra(@RequestBody CompraDTO compraDTO) {
       return service.createCompra(compraDTO);

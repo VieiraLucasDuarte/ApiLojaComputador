@@ -36,7 +36,7 @@ public class PessoaController {
          return null;
    }
 
-   @PostMapping("/pessoa")
+   @PostMapping("/criar")
    @ResponseStatus(HttpStatus.CREATED)
    public Pessoa CreatedPessoa(@RequestBody PessoaDTO pessoaDTO) {
       return service.CreatedPessoa(pessoaDTO);
