@@ -1,5 +1,7 @@
 package com.loja.loja.entities;
 
+import java.util.List;
+
 import com.loja.loja.dto.CompraDTO;
 import jakarta.persistence.*;
 
@@ -13,6 +15,13 @@ public class Compra {
    private long IdPessoa;
    private float Quantidade;
    private float Valor;
+
+   @OneToMany(cascade =  CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+   @JoinColumn(name = "produto_id")
+   private List<Produto> produtos;
+   public Compra() {
+
+   }
 
    public long getID() {
       return ID;
