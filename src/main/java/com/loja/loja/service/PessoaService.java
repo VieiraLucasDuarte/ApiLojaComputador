@@ -14,6 +14,7 @@ public class PessoaService {
 
    public Pessoa CreatedPessoa(PessoaDTO pessoaDTO) {
       Pessoa pessoa = new Pessoa();
+      pessoa.setId(pessoaDTO.getId());
       pessoa.setNome(pessoaDTO.getNome());
       pessoa.setCPF(pessoaDTO.getCPF());
       pessoa.setCelular(pessoaDTO.getCelular());

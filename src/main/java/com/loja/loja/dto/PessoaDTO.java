@@ -1,12 +1,21 @@
 package com.loja.loja.dto;
 
 public class PessoaDTO {
+   private long Id;
    private String Nome;
    private String CPF;
    private String Celular;
    private String Endereco;
    private String Bairro;
    private String Complemento;
+
+   public long getId() {
+      return Id;
+   }
+
+   public void setId(long id) {
+      Id = id;
+   }
 
    public String getNome() {
       return Nome;
