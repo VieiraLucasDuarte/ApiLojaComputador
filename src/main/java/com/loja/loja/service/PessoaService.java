@@ -1,11 +1,14 @@
 package com.loja.loja.service;
 
 import com.loja.loja.dto.PessoaDTO;
+import com.loja.loja.dto.UsuarioDTO;
 import com.loja.loja.entities.Pessoa;
 import com.loja.loja.repository.ICompraRepository;
 import com.loja.loja.repository.IPessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class PessoaService {
@@ -23,4 +26,10 @@ public class PessoaService {
       pessoa.setComplemento(pessoaDTO.getComplemento());
       return pessoaRepository.save(pessoa);
    }
+
+   public Optional<Pessoa> VerificarPessoa(UsuarioDTO usuario) {
+      return pessoaRepository.findByLogin(usuario.getLogin());
+   }
+
+
 }

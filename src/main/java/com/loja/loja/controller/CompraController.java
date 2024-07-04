@@ -18,22 +18,18 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/compra")
 public class CompraController {
 
-   //@Autowired
-   //rivate ICompraRepository repository;
-
    @Autowired
    private CompraService service;
 
    @Autowired
    private ICompraRepository repository;
 
-   @PostMapping()
-   @ResponseStatus(HttpStatus.CREATED)
-   public Compra CreatedCompra(@RequestBody CompraDTO compraDTO) {
-      return service.createCompra(compraDTO);
+   @PutMapping("create")
+   public void CreateCompra(CompraDTO compra) {
+      service.createCompra(compra);
    }
 
-   @GetMapping("/compra")
+   @GetMapping("/pedido")
    public List<Compra> findAll() {
       return repository.findAll();
    }

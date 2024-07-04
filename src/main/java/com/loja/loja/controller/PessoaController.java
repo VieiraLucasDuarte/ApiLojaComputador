@@ -14,17 +14,13 @@ import java.util.Optional;
 @RestController
 @RequestMapping(value = "/pessoa")
 public class PessoaController {
-
-   @Autowired
-   private IPessoaRepository repository;
-
    @Autowired
    private PessoaService service;
 
    @PostMapping("/login")
    @ResponseStatus(HttpStatus.CREATED)
    public Pessoa Login(@RequestBody UsuarioDTO pessoaDTO) {
-      Optional<Pessoa> user = repository.findByLogin(pessoaDTO.getLogin());
+      Optional<Pessoa> user = service.VerificarPessoa(pessoaDTO);
 
       if(user.isPresent()) {
          Pessoa pessoa = user.get();

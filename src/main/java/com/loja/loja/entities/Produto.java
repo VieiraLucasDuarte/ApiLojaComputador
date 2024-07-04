@@ -16,6 +16,8 @@ public class Produto {
    private boolean promocao;
    private int quantidade;
 
+   private String imagem;
+
    public String getImagem() {
       return imagem;
    }
@@ -23,8 +25,6 @@ public class Produto {
    public void setImagem(String imagem) {
       this.imagem = imagem;
    }
-
-   private String imagem;
 
    @ManyToOne()
    @JoinColumn(name = "categoria_id")

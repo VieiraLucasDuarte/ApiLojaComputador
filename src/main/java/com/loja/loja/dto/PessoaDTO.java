@@ -1,67 +1,67 @@
 package com.loja.loja.dto;
 
 public class PessoaDTO {
-   private long Id;
-   private String Nome;
-   private String CPF;
-   private String Celular;
-   private String Endereco;
-   private String Bairro;
-   private String Complemento;
+   private long id;
+   private String nome;
+   private String cpf;
+   private String celular;
+   private String endereco;
+   private String bairro;
+   private String complemento;
 
    public long getId() {
-      return Id;
+      return id;
    }
 
    public void setId(long id) {
-      Id = id;
+      id = id;
    }
 
    public String getNome() {
-      return Nome;
+      return nome;
    }
 
    public void setNome(String nome) {
-      Nome = nome;
+      nome = nome;
    }
 
    public String getCPF() {
-      return CPF;
+      return cpf;
    }
 
    public void setCPF(String CPF) {
-      this.CPF = CPF;
+      this.cpf = CPF;
    }
 
    public String getCelular() {
-      return Celular;
+      return celular;
    }
 
    public void setCelular(String celular) {
-      Celular = celular;
+      celular = celular;
    }
 
    public String getEndereco() {
-      return Endereco;
+      return endereco;
    }
 
    public void setEndereco(String endereco) {
-      Endereco = endereco;
+      endereco = endereco;
    }
 
    public String getBairro() {
-      return Bairro;
+      return bairro;
    }
 
    public void setBairro(String bairro) {
-      Bairro = bairro;
+      bairro = bairro;
    }
 
    public String getComplemento() {
-      return Complemento;
+      return complemento;
    }
 
    public void setComplemento(String complemento) {
-      Complemento = complemento;
+      complemento = complemento;
    }
 }

@@ -16,11 +16,15 @@ public class Compra {
    private float Quantidade;
    private float Valor;
 
-   @OneToMany(cascade =  CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-   @JoinColumn(name = "produto_id")
-   private List<Produto> produtos;
-   public Compra() {
+   @ManyToOne(fetch = FetchType.EAGER)
+   @JoinColumn(name = "IdPessoa", referencedColumnName = "id", insertable = false, updatable = false)
+   private Pessoa pessoa;
 
+   @ManyToOne(fetch = FetchType.EAGER)
+   @JoinColumn(name = "idProduto", referencedColumnName = "id", insertable = false, updatable = false)
+   private Produto produto;
+
+   public Compra() {
    }
 
    public long getID() {
@@ -63,4 +67,19 @@ public class Compra {
       Valor = valor;
    }
 
+   public Pessoa getPessoa() {
+      return pessoa;
+   }
+
+   public void setPessoa(Pessoa pessoa) {
+      this.pessoa = pessoa;
+   }
+
+   public Produto getProduto() {
+      return produto;
+   }
+
+   public void setProduto(Produto produto) {
+      this.produto = produto;
+   }
 }
